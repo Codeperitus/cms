@@ -1,0 +1,31 @@
+ac\CmsAdminBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: ac\CmsAdminBundle\Entity\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+        firstName:
+            type: string
+            length: 255
+        lastName:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        roleId:
+            type: integer
+        isActive:
+            type: boolean
+    lifecycleCallbacks: {  }

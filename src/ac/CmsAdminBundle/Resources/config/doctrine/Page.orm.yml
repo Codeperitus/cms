@@ -1,0 +1,33 @@
+ac\CmsAdminBundle\Entity\Page:
+    type: entity
+    table: null
+    repositoryClass: ac\CmsAdminBundle\Entity\PageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pageTitle:
+            type: string
+            length: 255
+        pageContent:
+            type: text
+        creationDate:
+            type: datetime
+        modificationDate:
+            type: datetime
+        status:
+            type: string
+            length: 255
+        pageParent:
+            type: integer
+        menuOrder:
+            type: integer
+        pageAuthor:
+            type: integer
+        pageRoute:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

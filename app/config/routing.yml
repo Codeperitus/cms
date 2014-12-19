@@ -1,0 +1,11 @@
+ac_cms_admin:
+    resource: "@acCmsAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ac_cms_front:
+    resource: "@acCmsFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

@@ -1,0 +1,15 @@
+ac\CmsAdminBundle\Entity\Role:
+    type: entity
+    table: null
+    repositoryClass: ac\CmsAdminBundle\Entity\RoleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        roleName:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

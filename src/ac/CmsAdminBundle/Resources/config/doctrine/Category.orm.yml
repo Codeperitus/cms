@@ -1,0 +1,17 @@
+ac\CmsAdminBundle\Entity\Category:
+    type: entity
+    table: null
+    repositoryClass: ac\CmsAdminBundle\Entity\CategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categoryTitle:
+            type: string
+            length: 255
+        isActive:
+            type: boolean
+    lifecycleCallbacks: {  }

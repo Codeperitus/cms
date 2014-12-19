@@ -1,0 +1,30 @@
+ac\CmsAdminBundle\Entity\Post:
+    type: entity
+    table: null
+    repositoryClass: ac\CmsAdminBundle\Entity\PostRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        postTitle:
+            type: string
+            length: 255
+        postContent:
+            type: text
+        creationDate:
+            type: datetime
+        modificationDate:
+            type: datetime
+        status:
+            type: string
+            length: 255
+        commentStatus:
+            type: boolean
+        commentCount:
+            type: integer
+        categoryId:
+            type: integer
+    lifecycleCallbacks: {  }
