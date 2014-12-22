@@ -1,7 +1,7 @@
-ac\CmsAdminBundle\Entity\Image:
+ac\DataBundle\Entity\Image:
     type: entity
     table: null
-    repositoryClass: ac\CmsAdminBundle\Entity\ImageRepository
+    repositoryClass: ac\DataBundle\Entity\ImageRepository
     id:
         id:
             type: integer

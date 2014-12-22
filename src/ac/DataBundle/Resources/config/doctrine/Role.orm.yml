@@ -1,7 +1,7 @@
-ac\CmsAdminBundle\Entity\Category:
+ac\DataBundle\Entity\Role:
     type: entity
     table: null
-    repositoryClass: ac\CmsAdminBundle\Entity\CategoryRepository
+    repositoryClass: ac\DataBundle\Entity\RoleRepository
     id:
         id:
             type: integer
@@ -9,9 +9,7 @@ ac\CmsAdminBundle\Entity\Category:
             generator:
                 strategy: AUTO
     fields:
-        categoryTitle:
+        roleName:
             type: string
             length: 255
-        isActive:
-            type: boolean
     lifecycleCallbacks: {  }

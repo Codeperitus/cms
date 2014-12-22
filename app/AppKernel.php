@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new ac\CmsFrontBundle\acCmsFrontBundle(),
             new ac\CmsAdminBundle\acCmsAdminBundle(),
+            new ac\DataBundle\acDataBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

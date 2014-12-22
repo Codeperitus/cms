@@ -1,13 +1,13 @@
 <?php
 
-namespace ac\CmsAdminBundle\Entity;
+namespace ac\DataBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Post
+ * Page
  */
-class Post
+class Page
 {
     /**
      * @var integer
@@ -17,12 +17,12 @@ class Post
     /**
      * @var string
      */
-    private $postTitle;
+    private $pageTitle;
 
     /**
      * @var string
      */
-    private $postContent;
+    private $pageContent;
 
     /**
      * @var \DateTime
@@ -40,19 +40,24 @@ class Post
     private $status;
 
     /**
-     * @var boolean
+     * @var integer
      */
-    private $commentStatus;
+    private $pageParent;
 
     /**
      * @var integer
      */
-    private $commentCount;
+    private $menuOrder;
 
     /**
      * @var integer
      */
-    private $categoryId;
+    private $pageAuthor;
+
+    /**
+     * @var string
+     */
+    private $pageRoute;
 
 
     /**
@@ -66,56 +71,56 @@ class Post
     }
 
     /**
-     * Set postTitle
+     * Set pageTitle
      *
-     * @param string $postTitle
-     * @return Post
+     * @param string $pageTitle
+     * @return Page
      */
-    public function setPostTitle($postTitle)
+    public function setPageTitle($pageTitle)
     {
-        $this->postTitle = $postTitle;
+        $this->pageTitle = $pageTitle;
 
         return $this;
     }
 
     /**
-     * Get postTitle
+     * Get pageTitle
      *
      * @return string 
      */
-    public function getPostTitle()
+    public function getPageTitle()
     {
-        return $this->postTitle;
+        return $this->pageTitle;
     }
 
     /**
-     * Set postContent
+     * Set pageContent
      *
-     * @param string $postContent
-     * @return Post
+     * @param string $pageContent
+     * @return Page
      */
-    public function setPostContent($postContent)
+    public function setPageContent($pageContent)
     {
-        $this->postContent = $postContent;
+        $this->pageContent = $pageContent;
 
         return $this;
     }
 
     /**
-     * Get postContent
+     * Get pageContent
      *
      * @return string 
      */
-    public function getPostContent()
+    public function getPageContent()
     {
-        return $this->postContent;
+        return $this->pageContent;
     }
 
     /**
      * Set creationDate
      *
      * @param \DateTime $creationDate
-     * @return Post
+     * @return Page
      */
     public function setCreationDate($creationDate)
     {
@@ -138,7 +143,7 @@ class Post
      * Set modificationDate
      *
      * @param \DateTime $modificationDate
-     * @return Post
+     * @return Page
      */
     public function setModificationDate($modificationDate)
     {
@@ -161,7 +166,7 @@ class Post
      * Set status
      *
      * @param string $status
-     * @return Post
+     * @return Page
      */
     public function setStatus($status)
     {
@@ -181,71 +186,94 @@ class Post
     }
 
     /**
-     * Set commentStatus
+     * Set pageParent
      *
-     * @param boolean $commentStatus
-     * @return Post
+     * @param integer $pageParent
+     * @return Page
      */
-    public function setCommentStatus($commentStatus)
+    public function setPageParent($pageParent)
     {
-        $this->commentStatus = $commentStatus;
+        $this->pageParent = $pageParent;
 
         return $this;
     }
 
     /**
-     * Get commentStatus
-     *
-     * @return boolean 
-     */
-    public function getCommentStatus()
-    {
-        return $this->commentStatus;
-    }
-
-    /**
-     * Set commentCount
-     *
-     * @param integer $commentCount
-     * @return Post
-     */
-    public function setCommentCount($commentCount)
-    {
-        $this->commentCount = $commentCount;
-
-        return $this;
-    }
-
-    /**
-     * Get commentCount
+     * Get pageParent
      *
      * @return integer 
      */
-    public function getCommentCount()
+    public function getPageParent()
     {
-        return $this->commentCount;
+        return $this->pageParent;
     }
 
     /**
-     * Set categoryId
+     * Set menuOrder
      *
-     * @param integer $categoryId
-     * @return Post
+     * @param integer $menuOrder
+     * @return Page
      */
-    public function setCategoryId($categoryId)
+    public function setMenuOrder($menuOrder)
     {
-        $this->categoryId = $categoryId;
+        $this->menuOrder = $menuOrder;
 
         return $this;
     }
 
     /**
-     * Get categoryId
+     * Get menuOrder
      *
      * @return integer 
      */
-    public function getCategoryId()
+    public function getMenuOrder()
     {
-        return $this->categoryId;
+        return $this->menuOrder;
+    }
+
+    /**
+     * Set pageAuthor
+     *
+     * @param integer $pageAuthor
+     * @return Page
+     */
+    public function setPageAuthor($pageAuthor)
+    {
+        $this->pageAuthor = $pageAuthor;
+
+        return $this;
+    }
+
+    /**
+     * Get pageAuthor
+     *
+     * @return integer 
+     */
+    public function getPageAuthor()
+    {
+        return $this->pageAuthor;
+    }
+
+    /**
+     * Set pageRoute
+     *
+     * @param string $pageRoute
+     * @return Page
+     */
+    public function setPageRoute($pageRoute)
+    {
+        $this->pageRoute = $pageRoute;
+
+        return $this;
+    }
+
+    /**
+     * Get pageRoute
+     *
+     * @return string 
+     */
+    public function getPageRoute()
+    {
+        return $this->pageRoute;
     }
 }

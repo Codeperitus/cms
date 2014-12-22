@@ -1,3 +1,7 @@
+ac_data:
+    resource: "@acDataBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ac_cms_admin:
     resource: "@acCmsAdminBundle/Resources/config/routing.yml"
     prefix:   /

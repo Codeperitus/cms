@@ -1,6 +1,6 @@
 <?php
 
-namespace ac\CmsAdminBundle\Entity;
+namespace ac\DataBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

@@ -1,7 +1,7 @@
-ac\CmsAdminBundle\Entity\Post:
+ac\DataBundle\Entity\Page:
     type: entity
     table: null
-    repositoryClass: ac\CmsAdminBundle\Entity\PostRepository
+    repositoryClass: ac\DataBundle\Entity\PageRepository
     id:
         id:
             type: integer
@@ -9,10 +9,10 @@ ac\CmsAdminBundle\Entity\Post:
             generator:
                 strategy: AUTO
     fields:
-        postTitle:
+        pageTitle:
             type: string
             length: 255
-        postContent:
+        pageContent:
             type: text
         creationDate:
             type: datetime
@@ -21,10 +21,13 @@ ac\CmsAdminBundle\Entity\Post:
         status:
             type: string
             length: 255
-        commentStatus:
-            type: boolean
-        commentCount:
+        pageParent:
             type: integer
-        categoryId:
+        menuOrder:
             type: integer
+        pageAuthor:
+            type: integer
+        pageRoute:
+            type: string
+            length: 255
     lifecycleCallbacks: {  }

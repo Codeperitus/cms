@@ -1,7 +1,7 @@
-ac\CmsAdminBundle\Entity\User:
+ac\DataBundle\Entity\User:
     type: entity
     table: null
-    repositoryClass: ac\CmsAdminBundle\Entity\UserRepository
+    repositoryClass: ac\DataBundle\Entity\UserRepository
     id:
         id:
             type: integer
