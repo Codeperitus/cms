@@ -1,0 +1,24 @@
+ac\DataBundle\Entity\UserRole:
+    type: entity
+    table: null
+    repositoryClass: ac\DataBundle\Entity\UserRoleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        user:
+           targetEntity: User
+           inversedBy: UserRole
+           joinColumn:
+               name: userId
+               referencedColumnName: id
+        role:
+           targetEntity: Role
+           inversedBy: UserRole
+           joinColumn:
+               name: roleId
+               referencedColumnName: id
+    lifecycleCallbacks: {  }

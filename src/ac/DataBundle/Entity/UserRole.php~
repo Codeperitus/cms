@@ -1,0 +1,13 @@
+<?php
+
+namespace ac\DataBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UserRole
+ */
+class UserRole
+{
+   
+}
