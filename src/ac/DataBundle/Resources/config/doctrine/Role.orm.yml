@@ -12,4 +12,23 @@ ac\DataBundle\Entity\Role:
         roleName:
             type: string
             length: 255
+    oneToMany:
+       users:
+           targetEntity: UserRole
+           mappedBy: role          
+        
+#    manyToMany:
+#        users:
+#          targetEntity: User
+#          inversedBy: Role
+#          joinByTable:
+#            name: UserRole
+#            joinByColumns:
+#              roleId:
+#                referencedColumnName: id
+#                nullable: false
+#            inverseJoinColumns:
+#                userId:
+#                referencedColumnName: id
+#                nullable: false
     lifecycleCallbacks: {  }

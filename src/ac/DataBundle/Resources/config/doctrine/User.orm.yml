@@ -24,8 +24,24 @@ ac\DataBundle\Entity\User:
         email:
             type: string
             length: 255
-        roleId:
-            type: integer
         isActive:
             type: boolean
-    lifecycleCallbacks: {  }
+            
+    oneToMany:
+        roles:
+            targetEntity: UserRole
+            mappedBy: user
+        posts:
+            targetEntity: Post
+            mappedBy: user
+        pages:
+            targetEntity: Page
+            mappedBy: user        
+#    manyToMany:
+#        roles:
+#          targetEntity: Role
+#          mappedBy: users
+    lifecycleCallbacks:
+        prePersist: [ onPrePersist ]
+        preUpdate: [ onPreUpdate ]
+    

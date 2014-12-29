@@ -1,5 +1,5 @@
 <?php
-namespace ac\CmsAdminBundle\Subscriber;
+namespace ac\DataBundle\Subscriber;
          
 use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
          
@@ -26,7 +26,7 @@ class TablePrefixSubscriber implements \Doctrine\Common\EventSubscriber
             return;
         }
  
-        if (FALSE !== strpos($classMetadata->namespace, 'ac\CmsAdminBundle')) {
+        if (FALSE !== strpos($classMetadata->namespace, 'ac\DataBundle')) {
             $classMetadata->setPrimaryTable(array('name' => $this->prefix . $classMetadata->getTableName()));
  
             foreach ($classMetadata->getAssociationMappings() as $fieldName => $mapping) {

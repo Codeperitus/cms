@@ -1,55 +1,14 @@
 <?php
 
-namespace ac\CmsAdminBundle\Entity;
+namespace ac\DataBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\Role\RoleInterface;
 
 /**
  * Role
  */
-class Role
-{
-    /**
-     * @var integer
-     */
-    private $id;
+class Role {
 
-    /**
-     * @var string
-     */
-    private $roleName;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set roleName
-     *
-     * @param string $roleName
-     * @return Role
-     */
-    public function setRoleName($roleName)
-    {
-        $this->roleName = $roleName;
-
-        return $this;
-    }
-
-    /**
-     * Get roleName
-     *
-     * @return string 
-     */
-    public function getRoleName()
-    {
-        return $this->roleName;
-    }
+    
 }

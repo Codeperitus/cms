@@ -14,4 +14,9 @@ ac\DataBundle\Entity\Category:
             length: 255
         isActive:
             type: boolean
+    oneToMany: 
+        posts:
+            targetEntity: Post
+            mappedBy: category        
+    
     lifecycleCallbacks: {  }

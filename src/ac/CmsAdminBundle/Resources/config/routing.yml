@@ -1,3 +1,6 @@
+ac_cms_admin_user:
+    resource: "@acCmsAdminBundle/Resources/config/routing/user.yml"
+    prefix:   /user
 ac_cms_admin_homepage:
     path:     /hello/{name}
     defaults: { _controller: acCmsAdminBundle:Default:index }

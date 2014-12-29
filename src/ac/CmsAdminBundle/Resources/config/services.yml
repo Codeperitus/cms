@@ -1,8 +1,4 @@
-parameters:
-    accmsadminbundle.db.table_prefix: ac
 services:
-            accmsadminbundle.tblprefix_subscriber:
-                class: ac\CmsAdminBundle\Subscriber\TablePrefixSubscriber
-                arguments: [%accmsadminbundle.db.table_prefix%]
-                tags:
-                    - { name: doctrine.event_subscriber }
+#    ac_data.example:
+#        class: ac\CMSAdminBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

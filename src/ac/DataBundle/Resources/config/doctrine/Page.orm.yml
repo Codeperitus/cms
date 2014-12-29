@@ -25,9 +25,14 @@ ac\DataBundle\Entity\Page:
             type: integer
         menuOrder:
             type: integer
-        pageAuthor:
-            type: integer
         pageRoute:
             type: string
             length: 255
+    manyToOne:
+        user:
+            targetEntity: User
+            inversedBy: Page
+            joinColumn:
+                name: userId
+                referencedColumnName: id
     lifecycleCallbacks: {  }

@@ -25,6 +25,18 @@ ac\DataBundle\Entity\Post:
             type: boolean
         commentCount:
             type: integer
-        categoryId:
-            type: integer
+    manyToOne:
+        category:
+            targetEntity: Category
+            inversedBy: Post
+            joinColumn:
+                name: categoryId
+                referencedColumnName: id
+        user:
+            targetEntity: User
+            inversedBy: Post
+            joinColumn:
+                name: userId
+                referencedColumnName: id
+   
     lifecycleCallbacks: {  }
